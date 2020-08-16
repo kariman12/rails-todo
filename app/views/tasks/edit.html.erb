@@ -1,7 +1,9 @@
+
+
 <h1>タスク編集</h1>
 <%= form_for (@task) do |f| %>
-    <div><%= f.label :title %></div>
-    <div><%= f.text_field :title %></div>
-    <div><%= f.submit %></div>
+    <div><%= f.label :title, class:"control-label"  %></div>
+    <div><%= f.text_field :title, class:"form-control" %></div>
+    <div><%= f.submit "変更する", class:"btn btn-primary" %></div>
 <% end %>
-<%= link_to '戻る', tasks_path %>
+<%= link_to '戻る', tasks_path, class:"btn" %>
